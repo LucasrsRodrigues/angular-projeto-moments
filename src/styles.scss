@@ -12,6 +12,8 @@
   --color-text: #444;
   --color-background: #fff;
   --color-light: #efefef;
+
+  --color-red: #DC3545;
 }
 
 a {
@@ -67,5 +69,14 @@ input[type="submit"] {
     color: var(--color-primary);
     border-color: var(--color-primary);
     background-color: transparent;
+  }
+}
+
+.validation-error {
+  p {
+    color: var(--color-red);
+    margin-top: .4em;
+    border-left: 3px spod var(--color-red);
+    padding-left: .2em;
   }
 }
