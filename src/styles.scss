@@ -4,6 +4,14 @@
   font-family: Cambria, sans-serif;
   box-sizing: border-box;
   color: #444;
+  outline: var(--color-primary);
+}
+
+:root {
+  --color-primary: #dec129;
+  --color-text: #444;
+  --color-background: #fff;
+  --color-light: #efefef;
 }
 
 a {
@@ -13,5 +21,51 @@ a {
 }
 
 a:hover {
-  color: #dec129;
+  color: var(--color-primary);
+}
+
+// Form
+form {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+  }
+
+  input,
+  textarea {
+    padding: .6em;
+    color: #777;
+    font-size: .8em;
+
+    border: 2px solid var(--color-light);
+    border-radius: 1em;
+  }
+}
+
+input[type="submit"] {
+  background: var(--color-light);
+  border: 2px solid transparent;
+  padding: .6em 1em;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: .4s;
+  border-radius: 1em;
+
+
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: transparent;
+  }
 }

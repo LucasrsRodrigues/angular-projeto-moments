@@ -23,7 +23,7 @@ nav {
   }
 
   &:hover>h2 {
-    color: #dec129;
+    color: var(--color-primary);
   }
 }
 
@@ -38,9 +38,8 @@ nav {
   }
 }
 
-
 #add a {
-  color: #dec129;
+  color: var(--color-primary);
 
   &:hover {
     background: #efefef;
