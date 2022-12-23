@@ -10,7 +10,7 @@
 
   <div class="form-group">
     <label for="description">Descrição:</label>
-    <textarea placeholder="O que aconteceu lá?" required></textarea>
+    <textarea placeholder="O que aconteceu lá?" formControlName="description" required></textarea>
 
     <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
       <p *ngIf="description.errors?.['required']">A descrição é obrigatoria</p>
@@ -19,7 +19,7 @@
 
   <div class="form-group">
     <label for="image">Coloque a foto que mais marcou:</label>
-    <input type="file">
+    <input type="file" (change)="onFileSelected($event)">
   </div>
 
   <input type="submit" value="{{ btnText }}">
